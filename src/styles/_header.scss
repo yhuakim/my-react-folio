@@ -1,0 +1,52 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    
+    .nav_box {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.863);
+        display: flex;
+        position: relative;
+        left: 20%;
+        top: 20px;
+        padding: 0 20px;
+        border-radius: 10px;
+        /* z-index: 5; */
+
+        .menu {
+            display: flex;
+            position: relative;
+            left: 20%;
+            top: 0;
+            
+            li {
+                padding: 20px;
+                list-style: none;
+    
+                a {
+                    text-decoration: none;
+                    color: rgba(194, 194, 194, 0.98);
+                    font-size: 18px;
+                }
+            }
+    
+        }
+    }
+
+    
+}
+
+.image_box {
+    width: 200px;
+    position: relative;
+    left: 8%;
+    top: 14px;
+    /* top: 35px;
+    padding: 40px 0 10px 0;
+    z-index: 2; */
+
+    img {
+        width: 50px;
+    }
+}
