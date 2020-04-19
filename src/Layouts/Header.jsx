@@ -1,46 +1,41 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo--2x.png";
 
 class Header extends Component {
-  state = {};
+  
   render() {
     return (
-      <nav className="navbar">
-        <div className="nav_box">
+       <nav className="navbar">
+          <div className="nav_box">
           <div className="image_box">
             <img src={Logo} alt="jilis-logo"/>
           </div>
 
-          <div className="menu-toggle close">
-            <span id="line-1"></span>
-            <span id="line-2"></span>
-            <span id="line-3"></span>
-          </div>
-
           <ul className="menu">
-              <li className="menu-item">
-                <a href="#home" className="menu-link home active">
-                  Home
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="#about" className="menu-link about">
-                  About
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="#work" className="menu-link about">
-                  Works
-                </a>
-              </li>
-              <li className="menu-item">
-                <a href="#contact" className="menu-link about">
-                  Contact
-                </a>
-              </li>
+                <NavLink to="/" exact>
+                  <li className="menu-item">
+                      Home
+                  </li>
+                </NavLink>
+                <NavLink to="/about">
+                  <li className="menu-item">
+                    About
+                  </li>
+                </NavLink>
+                <NavLink to="/works">
+                  <li className="menu-item">
+                      Works
+                  </li>
+                </NavLink>
+                <NavLink to="/contact">
+                  <li className="menu-item">
+                      Contact
+                  </li>
+                </NavLink>
           </ul>
         </div>
-    </nav>
+      </nav>
     );
   }
 }

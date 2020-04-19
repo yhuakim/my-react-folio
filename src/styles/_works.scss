@@ -5,6 +5,7 @@
     background-color: rgba(228, 228, 228, 0.5);
 
     &_title {
+        padding-top: 85px;
         text-align: center;
         margin-bottom: 20px;
         
@@ -68,10 +69,10 @@
 
             .details {
                 width: 250px;
+                height: 100px;
                 font-size: 20px;
                 font-weight: 200;
                 margin-bottom: 10px;
-            }
         }
 
         .more_box {
@@ -99,5 +100,6 @@
             }
            
         }
+    }
     }
 }

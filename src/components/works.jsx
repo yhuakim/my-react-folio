@@ -8,7 +8,7 @@ class Works extends Component {
             <main className="works_box">
                 <div className="works_box_title">
                     <h1 className="work_title">
-                        My Works {/* <hr/> */}
+                        My Works
                     </h1>
                 </div>
 
@@ -22,7 +22,7 @@ class Works extends Component {
                                 Lorem, ipsum dolor.
                             </h4>
                             <p className="details">
-                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam <br/> deserunt totam, sed nam expedita error <br/> quidem fugiat distinctio, cumque omnis a, <br/> sequi ut voluptas et quibusdam unde esse.
+                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam <br/> 
                             </p>
                         </div>
                         <div className="more_box">
@@ -40,7 +40,7 @@ class Works extends Component {
                                 Lorem, ipsum dolor.
                             </h4>
                             <p className="details">
-                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam <br/> deserunt totam, sed nam expedita error <br/> quidem fugiat distinctio, cumque omnis a, <br/> sequi ut voluptas et quibusdam unde esse.
+                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam 
                             </p>
                         </div>
                         <div className="more_box">
@@ -58,7 +58,7 @@ class Works extends Component {
                                 Lorem, ipsum dolor.
                             </h4>
                             <p className="details">
-                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam <br/> deserunt totam, sed nam expedita error <br/> quidem fugiat distinctio, cumque omnis a, <br/> sequi ut voluptas et quibusdam unde esse.
+                                Lorem ipsum dolor sit amet consectetur <br/> adipisicing elit. Porro repellendus quisquam 
                             </p>
                         </div>
                         <div className="more_box">

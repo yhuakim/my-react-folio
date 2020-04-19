@@ -1,3 +1,4 @@
+@import "config";
 @import "weather";
 @import "header";
 @import "home";
@@ -5,3 +6,180 @@
 @import "works";
 @import "contact";
 @import "footer";
+
+a:hover{
+    color: rgb(240, 156, 156);
+}
+
+.active{
+    color: lightcoral;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(194, 194, 194, 0.98);
+}
+
+:root {
+    overflow-x: hidden;
+}
+
+@include mediaMd {
+    .navbar {
+        .nav_box {
+            width: 85%;
+            left: 8%;
+
+            .menu {
+                left: 3%;
+                
+                li {
+        
+                    a {
+                        font-size: 14px;
+                    }
+                }
+        
+            }
+        }
+    }
+    
+    .image_box {
+        left: 1%;
+    
+        img {
+            width: 50px;
+        }
+    }
+
+    
+}
+
+@include mediaLg {
+    .navbar {
+        .nav_box {
+            .menu {
+                left: 3%;
+                
+                li {
+        
+                    a {
+                        font-size: 16px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 1%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
+}
+
+.works {
+    position: relative;
+    flex-wrap: wrap;
+    left: 12%;
+
+    .work_01, .work_02, .work_03 {
+        margin-bottom: 10px;
+    }  
+}
+
+@include mediaLg-ibw {
+    .works {
+        left: 12%;
+    }
+}
+
+@include mediaLg-bw {
+    .works {
+        left: 0%;
+    
+        .work_01, .work_02, .work_03 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include mediaBtw {
+    
+    .works {
+        position: relative;
+        flex-wrap: wrap;
+        left: 0%;
+    
+        .work_01, .work_02, .work_03 {
+            margin-bottom: 10px;
+        }  
+    }
+}
+
+@include mediaXl {
+    .navbar {
+        .nav_box {/* 
+            width: 25%; */
+            .menu {
+                left: 15%;
+                
+                li {
+        
+                    a {
+                        font-size: 18px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 8%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
+
+}
+
+@include mediaXxl {
+    .navbar {
+        .nav_box {/* 
+            width: 25%; */
+            .menu {
+                left: 25%;
+                
+                li {
+        
+                    a {
+                        font-size: 18px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 10%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
+}

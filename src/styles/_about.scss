@@ -1,11 +1,10 @@
 .about_box {
     width: 100%;
-    display: grid;
-    align-items: center;
+    height: 91.8vh;
     text-align: center;
 
     .title_box {
-        padding: 20px;
+        padding-top: 70px;
 
         .about_title {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,6 +12,7 @@
             font-weight: 500;
             color: rgba(0, 0, 0, 0.75);
             text-shadow: 2px 2px 5px rgba(77, 77, 77, 0.5);
+            padding: 20px;
         }
 
     }
