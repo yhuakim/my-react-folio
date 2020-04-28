@@ -9,7 +9,13 @@ import {Input,
         Nav,
         Row,
         Col
-    } from 'reactstrap'
+    } from 'reactstrap';
+
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
 
 class Contact extends Component {
     state = {  
@@ -37,8 +43,21 @@ class Contact extends Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
-        e.target.value="";
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...this.state })
+          })
+            .then(() => alert("Success!, Thanks for reaching out..."))
+            .catch(error => alert(error));
+    
+          e.preventDefault();
+           
+          this.setState({
+                name: "",
+                email: "",
+                message: ""
+            });
     }
 
     render() {
@@ -53,9 +72,11 @@ class Contact extends Component {
                     <Col sm="12" xl={{ size: 8, offset: 2 }} md={{size: 8, offset: 2}}>
                         <Form
                         action="POST" 
-                        data-netlify
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
                         onSubmit={this.handleSubmit}
                         className="border border-info p-4 jumbotron shadow-sm mb-5">
+                            <input type="hidden" name="contact" value="contact" />
                             <div>
                                 <Label md={10} 
                                     xl={9}
