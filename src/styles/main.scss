@@ -7,24 +7,33 @@
 @import "contact";
 @import "footer";
 
-a:hover{
-    color: rgb(240, 156, 156);
+.text-reset{
+    color: rgba(255, 172, 172, 0.712);
 }
 
-.active{
+.active {
     color: lightcoral;
+    &:hover {
+        color: lightcoral;
+    }
 }
 
-a {
-    text-decoration: none;
+.color > span {
     color: rgba(194, 194, 194, 0.98);
 }
 
 :root {
     overflow-x: hidden;
+    background: url(../assets/background-image.jpg);
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+
 }
 
-@include mediaMd {
+/* @include mediaMd {
     .navbar {
         .nav_box {
             width: 85%;
@@ -125,8 +134,8 @@ a {
 
 @include mediaXl {
     .navbar {
-        .nav_box {/* 
-            width: 25%; */
+        .nav_box {
+            width: 25%; 
             .menu {
                 left: 15%;
                 
@@ -156,8 +165,8 @@ a {
 
 @include mediaXxl {
     .navbar {
-        .nav_box {/* 
-            width: 25%; */
+        .nav_box {
+            width: 25%; 
             .menu {
                 left: 25%;
                 
@@ -182,4 +191,4 @@ a {
         }
     }
     
-}
+} */

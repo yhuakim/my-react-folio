@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt, faTwitter, faMedium } from '@fortawesome/free-brands-svg-icons';
+import {Input, 
+        Form, 
+        Label, 
+        Button, 
+        NavLink, 
+        Nav,
+        Row,
+        Col
+    } from 'reactstrap'
 
 class Contact extends Component {
     state = {  
@@ -34,83 +43,93 @@ class Contact extends Component {
 
     render() {
         return (
-            <main className="contact_box">
+            <main className="contact_box container text-center">
                 <div className="contact_title_box">
                     <h1 className="contact_title">
                         Contact Me
                     </h1>
                 </div>
+                <Row>
+                    <Col sm="12" xl={{ size: 8, offset: 2 }} md={{size: 8, offset: 2}}>
+                        <Form
+                        action="POST" 
+                        data-netlify
+                        onSubmit={this.handleSubmit}
+                        className="border border-info p-4 jumbotron shadow-sm mb-5">
+                            <div>
+                                <Label md={10} 
+                                    xl={9}
+                                    htmlFor="name">
+                                    <h3 className="Name-title float-left text-muted">
+                                        Name
+                                    </h3>
+                                    <Input 
+                                    type="text"
+                                    placeholder="Enter your name"
+                                    value={this.state.name}
+                                    onChange={this.handleNameChange}
+                                    />
+                                </Label>
 
-                <form 
-                action="POST" 
-                data-netlify
-                onSubmit={this.handleSubmit} >
-                    <div>
-                        <label htmlFor="name">
-                            <h3 className="Name-title">
-                                Name:
-                            </h3>
-                            <input 
-                            type="text"
-                            placeholder="Enter your name"
-                            value={this.state.name}
-                            onChange={this.handleNameChange}
-                            />
-                        </label>
+                                <Label 
+                                xl={9}
+                                md={10} htmlFor="email">
+                                    <h3 className="email-title float-left text-muted">
+                                        Email
+                                    </h3>
+                                    <Input 
+                                    type="email" 
+                                    name="email" 
+                                    
+                                    id="email" 
+                                    placeholder="Enter your Email" 
+                                    value={this.state.email}
+                                    onChange={this.handleEmailChange}
+                                    />
+                                </Label>
+                            </div>
 
-                        <label htmlFor="email">
-                            <h3 className="email-title">
-                                Email:
-                            </h3>
-                            <input 
-                            type="email" 
-                            name="email" 
-                            id="email" 
-                            placeholder="Enter your Email" 
-                            value={this.state.email}
-                            onChange={this.handleEmailChange}
-                             />
-                        </label>
-                    </div>
+                            <div>
+                                <Label md={10} 
+                                xl={9}
+                                htmlFor="message">
+                                    <h3 className="message-title float-left text-muted">
+                                        Message
+                                    </h3>
+                                    <Input
+                                    name="message" 
+                                    id="message"
+                                    tag="textarea" 
+                                    /* cols="30" 
+                                    rows="10" */
+                                    placeholder="Enter your text here"
+                                    value={this.state.message}
+                                    onChange={this.handleMessageChange}/>
+                                </Label>
+                            </div>
 
-                    <div>
-                        <label htmlFor="message">
-                            <h3 className="message-title">
-                                Message:
-                            </h3>
-                            <textarea 
-                            name="message" 
-                            id="message" 
-                            cols="30" 
-                            rows="10"
-                            placeholder="Enter your text here"
-                            value={this.state.message}
-                            onChange={this.handleMessageChange}/>
-                        </label>
-                    </div>
+                            <div>
+                                <Button 
+                                type="submit"
+                                className="btn btn-sm btn-success text-white">
+                                    Send a message
+                                </Button>
+                            </div>
+                        </Form>
+                    </Col>
+                </Row>
 
-                    <div>
-                        <button 
-                        type="submit">
-                            Send a message
-                        </button>
-                    </div>
-                </form>
-
-                <div className="social_link_box">
-                     <a href="https://www.github.com/yhuakim" className="social_link">
+                <Nav className="social_link_box d-flex mt-3">
+                     <NavLink href="https://www.github.com/yhuakim" className="social_link">
                         <FontAwesomeIcon icon={faGithubAlt} size="2x" />
-                        <div className="github">Github</div>
-                     </a>
-                     <a href="https://www.twitter.com/yhuakim" className="social_link">
+                     </NavLink>
+                     <NavLink href="https://www.twitter.com/yhuakim" className="social_link">
                         <FontAwesomeIcon icon={faTwitter} size="2x" />
-                        <div className="twitter">Twitter</div>
-                     </a>
-                     <a href="https://www.medium.com/JoachimArinze" target="_blank" className="social_link">
+                     </NavLink>
+                     <NavLink href="https://www.medium.com/JoachimArinze" className="social_link ">
                         <FontAwesomeIcon icon={faMedium} size="2x" />
-                        <div className="medium">Medium</div>
-                     </a>
-                 </div>
+                     </NavLink>
+                 </Nav>
             </main>
         );
     }

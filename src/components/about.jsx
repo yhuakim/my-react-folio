@@ -4,9 +4,9 @@ class About extends Component {
     state = {  }
     render() {
         return (
-            <main className="about_box">
-                <div className="title_box">
-                    <h1 className="about_title">
+            <main className="about_box container text-center">
+                <div className="title_box pt-5">
+                    <h1 className="about_title pt-5">
                         About Me
                     </h1>
                 </div>

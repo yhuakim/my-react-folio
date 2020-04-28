@@ -1,3 +1,9 @@
+@media (max-width: 576px) {
+  .menu-item {
+    font-size: small;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,48 +48,56 @@
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.navbar {
-  width: 100%;
+.nav-bar {
   position: fixed;
+  width: 100%;
   z-index: 5;
+  left: 12.5%;
 }
 
-.navbar .nav_box {
-  width: 60%;
-  background-color: rgba(0, 0, 0, 0.863);
+.nav-bar .nav_box {
+  width: 75%;
+  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  left: 20%;
-  top: 20px;
-  padding: 0 20px;
-  border-radius: 10px;
   /* z-index: 5; */
 }
 
-.navbar .nav_box .menu {
+.nav-bar .nav_box .menu {
+  position: relative;
+  right: 30px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  left: 20%;
-  top: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 5px;
 }
 
-.navbar .nav_box .menu li {
-  padding: 20px;
-  list-style: none;
-}
-
-.navbar .nav_box .menu li a {
+.nav-bar .nav_box .menu a {
   text-decoration: none;
   color: rgba(194, 194, 194, 0.98);
   font-size: 18px;
 }
 
+.nav-bar .nav_box .menu a:hover {
+  color: lightsalmon;
+}
+
+.nav-bar .nav_box .menu .active {
+  color: lightcoral;
+}
+
+.nav-bar .nav_box .menu li {
+  padding: 10px;
+  list-style: none;
+}
+
 .image_box {
-  width: 200px;
+  width: 100px;
   position: relative;
   left: 8%;
   top: 14px;
@@ -107,7 +121,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 91.8vh;
+  height: 90vh;
   z-index: 1;
 }
 
@@ -116,8 +130,8 @@
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
-  height: 91.8vh;
-  padding: 25px;
+  position: relative;
+  height: 90vh;
 }
 
 .home_box .introduction_box {
@@ -290,7 +304,7 @@
 
 .contact_box {
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   padding-top: 70px;
   text-align: center;
 }
@@ -312,11 +326,15 @@
   display: -ms-flexbox;
   display: flex;
   padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contact_box .social_link_box .social_link {
-  position: relative;
-  left: 30%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +343,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   text-decoration: none;
-  padding: 10px;
 }
 
 .contact_box .social_link_box .social_link .github {
@@ -345,31 +362,14 @@
   display: grid;
 }
 
-.contact_box form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  place-content: center;
-  margin-bottom: 20px;
-}
-
 .contact_box form div label:first-child {
-  padding-right: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact_box form h3 {
   text-align: left;
-  font-weight: 450;
-}
-
-.contact_box form button {
-  height: 25px;
-  background-color: greenyellow;
-  padding: 0 10px;
-  text-align: center;
-  border-radius: 5em;
-  outline: none;
+  font-weight: 300;
+  font-size: x-large;
 }
 
 .footer_box {
@@ -382,169 +382,197 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footer_box .copyright_box hr {
-  border: 1px solid rgba(129, 11, 11, 0.616);
-  width: 10%;
-  position: relative;
-  left: 45%;
-}
-
 .footer_box .copyright_box .copyright {
   position: relative;
-  top: 25px;
+  top: 20px;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 200;
   color: rgba(194, 194, 194, 0.5);
 }
 
-.footer_box .copyright_box .designer {
-  position: relative;
-  left: 28%;
-  bottom: 10px;
-  font-weight: 200;
-  color: rgba(194, 194, 194, 0.1);
-  line-height: 1;
-}
-
-.footer_box .copyright_box .designer .and {
-  position: relative;
-  top: 10px;
-  font-size: 18px;
-}
-
-.footer_box .copyright_box .designer .name {
-  position: relative;
-  left: 1.2%;
-  bottom: 5px;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-}
-
-a:hover {
-  color: #f09c9c;
+.text-reset {
+  color: rgba(255, 172, 172, 0.712);
 }
 
 .active {
   color: lightcoral;
 }
 
-a {
-  text-decoration: none;
+.active:hover {
+  color: lightcoral;
+}
+
+.color > span {
   color: rgba(194, 194, 194, 0.98);
 }
 
 :root {
   overflow-x: hidden;
+  background: url(../assets/background-image.jpg);
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
-  .navbar .nav_box {
-    width: 85%;
-    left: 8%;
-  }
-  .navbar .nav_box .menu {
-    left: 3%;
-  }
-  .navbar .nav_box .menu li a {
-    font-size: 14px;
-  }
-  .image_box {
-    left: 1%;
-  }
-  .image_box img {
-    width: 50px;
-  }
+/* @include mediaMd {
+    .navbar {
+        .nav_box {
+            width: 85%;
+            left: 8%;
+
+            .menu {
+                left: 3%;
+                
+                li {
+        
+                    a {
+                        font-size: 14px;
+                    }
+                }
+        
+            }
+        }
+    }
+    
+    .image_box {
+        left: 1%;
+    
+        img {
+            width: 50px;
+        }
+    }
+
+    
 }
 
-@media screen and (min-width: 768px) {
-  .navbar .nav_box .menu {
-    left: 3%;
-  }
-  .navbar .nav_box .menu li a {
-    font-size: 16px;
-  }
-  .image_box {
-    left: 1%;
-  }
-  .image_box img {
-    width: 50px;
-  }
+@include mediaLg {
+    .navbar {
+        .nav_box {
+            .menu {
+                left: 3%;
+                
+                li {
+        
+                    a {
+                        font-size: 16px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 1%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
 }
 
 .works {
-  position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  left: 12%;
-}
-
-.works .work_01, .works .work_02, .works .work_03 {
-  margin-bottom: 10px;
-}
-
-@media screen and (min-width: 782px) {
-  .works {
-    left: 12%;
-  }
-}
-
-@media screen and (min-width: 868px) {
-  .works {
-    left: 0%;
-  }
-  .works .work_01, .works .work_02, .works .work_03 {
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 901px) {
-  .works {
     position: relative;
-    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    left: 12%;
+
+    .work_01, .work_02, .work_03 {
+        margin-bottom: 10px;
+    }  
+}
+
+@include mediaLg-ibw {
+    .works {
+        left: 12%;
+    }
+}
+
+@include mediaLg-bw {
+    .works {
+        left: 0%;
+    
+        .work_01, .work_02, .work_03 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@include mediaBtw {
+    
+    .works {
+        position: relative;
         flex-wrap: wrap;
-    left: 0%;
-  }
-  .works .work_01, .works .work_02, .works .work_03 {
-    margin-bottom: 10px;
-  }
+        left: 0%;
+    
+        .work_01, .work_02, .work_03 {
+            margin-bottom: 10px;
+        }  
+    }
 }
 
-@media screen and (min-width: 1171px) {
-  .navbar .nav_box {
-    /* 
-            width: 25%; */
-  }
-  .navbar .nav_box .menu {
-    left: 15%;
-  }
-  .navbar .nav_box .menu li a {
-    font-size: 18px;
-  }
-  .image_box {
-    left: 8%;
-  }
-  .image_box img {
-    width: 50px;
-  }
+@include mediaXl {
+    .navbar {
+        .nav_box {
+            width: 25%; 
+            .menu {
+                left: 15%;
+                
+                li {
+        
+                    a {
+                        font-size: 18px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 8%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
+
 }
 
-@media screen and (min-width: 1363px) {
-  .navbar .nav_box {
-    /* 
-            width: 25%; */
-  }
-  .navbar .nav_box .menu {
-    left: 25%;
-  }
-  .navbar .nav_box .menu li a {
-    font-size: 18px;
-  }
-  .image_box {
-    left: 10%;
-  }
-  .image_box img {
-    width: 50px;
-  }
-}
+@include mediaXxl {
+    .navbar {
+        .nav_box {
+            width: 25%; 
+            .menu {
+                left: 25%;
+                
+                li {
+        
+                    a {
+                        font-size: 18px;
+                    }
+                }
+        
+            }
+        }
+    
+        
+    }
+    
+    .image_box {
+        left: 10%;
+    
+        img {
+            width: 50px;
+        }
+    }
+    
+} */
 /*# sourceMappingURL=main.css.map */

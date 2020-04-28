@@ -1,53 +1,5 @@
-@mixin mediaXsm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
-}
-
-@mixin mediaSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
-}
-
-@mixin mediaMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-
-@mixin mediaLg {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
-}
-
-@mixin mediaLg-ibw {
-    @media screen and (min-width: 782px){
-        @content;
-    }
-}
-
-@mixin mediaLg-bw {
-    @media screen and (min-width: 868px) {
-        @content;
-    }
-}
-
-@mixin mediaBtw {
-    @media screen and (min-width: 901px) {
-        @content;
-    }
-}
-
-@mixin mediaXl {
-    @media screen and (min-width: 1171px) {
-        @content;
-    }
-}
-
-@mixin mediaXxl {
-    @media screen and (min-width: 1363px) {
-        @content;
+@media (max-width: 576px) {
+    .menu-item {
+        font-size: small;
     }
 }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Home extends Component {
     render() {
         return(
-            <main className="home_box" id="home">
+            <main className="home_box text-center" id="home">
                 <div className="introduction_box">
                      <h1 className="specialization">
                     Graphics Designer / <br/>

@@ -1,11 +1,27 @@
 import React, { Component } from 'react';
-import bg1 from '../assets/bg1.jpg';
+//import bg1 from '../assets/bg1.jpg';
+import CardItem from '../sub-components/card';
+import {CardDeck, Container} from 'reactstrap'
 
 class Works extends Component {
     state = {  }
     render() {
         return (
-            <main className="works_box">
+            <Container>
+                <div className="container pl-5 pr-5 pb-5">
+                    <div className="works_box_title text-center">
+                        <h1 className="work_title">
+                            My Works
+                        </h1>
+                    </div>
+                    <CardDeck>
+                        <CardItem />
+                        <CardItem/>
+                        <CardItem/>
+                    </CardDeck>
+                </div>
+            </Container>
+           /*  <main className="works_box">
                 <div className="works_box_title">
                     <h1 className="work_title">
                         My Works
@@ -68,7 +84,7 @@ class Works extends Component {
                         </div>
                     </div>
                 </div>
-            </main>
+            </main> */
         );
     }
 }
