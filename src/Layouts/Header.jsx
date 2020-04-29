@@ -26,14 +26,14 @@ class Header extends Component {
   render() {
     return (
         <nav className="nav-bar">
-            <div className="nav_box rounded">
+            <div className="nav_box rounded col-12">
                 <div className="image_box">
                     <NavLink to="/" exact>
                         <img src={Logo} alt="jilis-logo"/>
                     </NavLink>
                 </div>
 
-                <ul className="menu">
+                <ul className="menu ">
                     <NavLink to="/" exact>
                         <li className="menu-item">
                             Home

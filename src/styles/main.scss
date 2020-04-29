@@ -7,6 +7,14 @@
 @import "contact";
 @import "footer";
 
+@include mediaSm {
+    li.menu-item {
+        font-size: smaller;
+        position: relative;
+        left: 30px;
+    }
+}
+
 .text-reset{
     color: rgba(255, 172, 172, 0.712);
 }

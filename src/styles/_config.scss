@@ -1,5 +1,5 @@
-@media (max-width: 576px) {
-    .menu-item {
-        font-size: small;
+@mixin mediaSm {
+    @media screen and (max-width: 576px) {
+        @content;
     }
 }
